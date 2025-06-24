@@ -1,4 +1,4 @@
-//C# versuib
+//C# version
 
 using System;
 
@@ -24,7 +24,7 @@ class Program
 
             if (userPrice == randomPrice)
             {
-                Console.WriteLine("Bien joué !");
+                Console.WriteLine("Bien jouz !");
                 break;
             }
             else if (userPrice < randomPrice)
