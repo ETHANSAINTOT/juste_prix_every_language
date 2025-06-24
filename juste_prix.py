@@ -1,3 +1,5 @@
+# Python version
+
 import random
 
 prix_random = random.randint(1, 100)
