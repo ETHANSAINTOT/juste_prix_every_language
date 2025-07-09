@@ -1,4 +1,4 @@
-//C# version
+// C#
 
 using System;
 
@@ -8,23 +8,22 @@ class Program
     {
         Random rng = new Random();
         int randomPrice = rng.Next(1, 101);
-
-        Console.WriteLine("Le prix est de" + randomPrice);
-
+        Console.WriteLine("Le prix est de " + randomPrice);
+        int tentatives = 0;
+        Console.WriteLine("Devinez un nombre entre 1 et 100 !");
         while (true)
         {
-            Console.Write("Quel est votre prix ? ");
+            tentatives++;
+            Console.Write($"Tentative {tentatives} - Quel est votre prix ? ");
             string input = Console.ReadLine();
-
             if (!int.TryParse(input, out int userPrice))
             {
-                Console.WriteLine("Entrée invalide. Veuillez entrer un nombre entier.");
+                Console.WriteLine("Erreur : Veuillez entrer un nombre valide ! (Cette tentative compte)");
                 continue;
             }
-
             if (userPrice == randomPrice)
             {
-                Console.WriteLine("Bien jouz !");
+                Console.WriteLine($"Bien jouee ! Vous avez trouvé en {tentatives} tentative(s) !");
                 break;
             }
             else if (userPrice < randomPrice)
