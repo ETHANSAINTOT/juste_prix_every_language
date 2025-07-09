@@ -1,7 +1,7 @@
 // JavaScript version
 
 let prix_random = Math.floor(Math.random() * 100) + 1;
-console.log(prix_random); // Décommentez pour voir le nombre à deviner
+console.log(prix_random);
 let tentatives = 0;
 console.log("Devinez un nombre entre 1 et 100 !");
 while (true) {
